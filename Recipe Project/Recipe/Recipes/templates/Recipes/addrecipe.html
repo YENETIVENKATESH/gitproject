@@ -1,0 +1,6 @@
+
+ <a href ="/Recipes/create/ " > <input type="button" name="add recipe" value="Add Recipe" ></a>
+
+ {% for recipe in recipes %}
+   <li><a href="/Recipes/{{recipe.id}}/detail/">{{recipe.name}}</a></li>
+ {% endfor %}

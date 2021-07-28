@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <form action="{% url 'Recipes:recipe' %}" method="POST" >
+{% csrf_token %}
+    <fieldset> <legend><h2>Add New Recipe Here</h2></legend>
+
+   Recipe name: <input type="text" name="name" value="">
+      <br><br>
+
+
+   Ingredients: <input type="text" name="ingredients" value="">
+       <br><br>
+
+
+    Process:<input type="text" name="process" value="">
+       <br><br>
+
+   <br>
+   <input type="submit" value="Create">
+
+     </fieldset>
+</form>
+</body>
+</html>
