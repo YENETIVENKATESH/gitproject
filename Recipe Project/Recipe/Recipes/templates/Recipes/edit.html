@@ -1,0 +1,26 @@
+  <form action="{% url 'Recipes:edit' edited_recipe.id %}" method="POST" enctype="multipart/form-data" >
+{% csrf_token %}
+    <fieldset> <legend><h2>Update Recipe Here</h2></legend>
+
+        Recipe id: <input type="text" name="id" value={{edited_recipe.id}}>
+      <br><br>
+
+   Recipe name: <input type="text" name="name" value={{edited_recipe.name}}>
+      <br><br>
+
+
+   Ingredients: <input type="text" name="ingredients" value={{edited_recipe.ingredients}}>
+       <br><br>
+
+
+    Process:<input type="text" name="process" value="{{edited_recipe.process}}">
+       <br><br>
+    Image:<input type="file" name="upload_image" value="">
+
+   <br>
+   <input type="submit" value="Update">
+
+     </fieldset>
+</form>
+</body>
+</html>

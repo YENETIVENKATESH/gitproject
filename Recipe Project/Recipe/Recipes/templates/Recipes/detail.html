@@ -1,5 +1,18 @@
+
+
 RECIPE NAME:{{details.name}}
 <br>
 INGRIDENTS: {{details.ingredients}}
 <br>
-PROCESS:  {{details.process}}
+PROCESS:  {{details.process}}<br>
+
+<img src="/media/{{details.images}}" width="200">
+<br><br>
+
+
+<a href="/Recipes/del/{{details.id}}/" ><input type="button" name ="delete" value="Delete"></a>
+<a href="/Recipes/edit/{{details.id}}" ><input type="button" name ="update" value="Edit"></a>
+<br><br><br>
+<a href="{% url 'Recipes:add_recipe' %}"> HOME </a>
+
+

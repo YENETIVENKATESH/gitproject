@@ -6,9 +6,10 @@ from django.db import models
 class Recipe(models.Model):
 
     name = models.CharField(max_length=300)
-    ingredients =models.CharField(max_length=1200)
+    ingredients = models.CharField(max_length=1200)
     process = models.CharField(max_length=1500)
-    pub_date=models.DateTimeField(null=True,blank=True)
+    images = models.ImageField(upload_to="images/", null=True, blank=True)
+    pub_date = models.DateTimeField(null=True,blank=True)
 
     def __str__(self):
         return self.name

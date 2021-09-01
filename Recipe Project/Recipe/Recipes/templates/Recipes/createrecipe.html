@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-  <form action="{% url 'Recipes:recipe' %}" method="POST" >
+
+  <form action="{% url 'Recipes:recipe' %}" method="POST" enctype="multipart/form-data" >
 {% csrf_token %}
     <fieldset> <legend><h2>Add New Recipe Here</h2></legend>
 
@@ -19,6 +13,7 @@
 
     Process:<input type="text" name="process" value="">
        <br><br>
+   Image:<input type="file" name="upload_image" value="">
 
    <br>
    <input type="submit" value="Create">
